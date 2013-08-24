@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>jQuery elevateZoom Demo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script> 
+	<script src="jquery.elevateZoom-2.5.5.min.js" type="text/javascript"></script>
+	<style>
+		/*set a border on the images to prevent shifting*/
+		#gallery_01 img{border:2px solid white;}
+		
+		/*Change the colour*/
+		.active img{border:2px solid #333 !important;}
+	</style>
+</head>
+<body>
+<img id="zoom_03" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg" width="411">
+
+<div id="gallery_01">
+ 
+<a href="#" data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image1.jpg">
+	<img src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png" width="100">
+</a>
+
+<a href="#" data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image2.jpg">
+	<img src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png" width="100">
+</a>
+
+<a href="# " data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg">
+     <img src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png" width="100">
+</a>
+
+<a href="#" data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image4.jpg">
+	<img src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png" width="100">
+</a>
+    
+</div>
+
+<script>
+
+$(document).ready(function () {
+	$("#zoom_03").elevateZoom({zoomLevel: 0.5, gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active"}); 
+
+	//$("#zoom_03").bind("click", function(e) {  
+	//  var ez =   $('#zoom_03').data('elevateZoom');
+	//  ez.closeAll(); //NEW: This function force hides the lens, tint and window	
+		//$.fancybox(ez.getGalleryList());
+	//  return false;
+	//}); 
+
+	}); 
+
+
+</script>
+</body>
+</html>
